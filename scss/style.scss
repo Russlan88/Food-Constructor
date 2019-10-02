@@ -1,0 +1,91 @@
+@import 'variables'; 
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper{
+    position: relative;
+    height: 996px;
+    overflow: hidden;
+}
+
+.left-gate, .right-gate, .content{
+    width: 50%;
+    height: 740px;
+    display: block;
+    position: absolute;
+    height: 100%;
+}
+
+.content{
+    background: url(../images/bg.jpg);
+    background-size: cover;
+    width: 100%;
+    ul{
+        width: 650px;
+        margin: 0 auto;
+        li:first-child{
+            display: none;
+            flex-wrap: wrap;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            justify-content: space-between;
+            div{
+                width: $element-width;
+                text-align: center;
+                height: 250px;
+                line-height: $element-height;
+                display: block;
+                margin-bottom: 25px;
+                border: 5px solid #dedede;
+                &:hover {
+                       cursor: $cursor; 
+                }
+            }
+        }
+    }
+}
+ 
+
+.left-gate{
+    left: 0%;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    background: url(../images/pergamena.png) no-repeat scroll 100% center, linear-gradient(to right, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 1%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.75) 100%);
+    font-size: 10px; 
+}
+
+
+.right-gate{
+    right:0%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 1%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.25) 100%) repeat scroll 0% 0% transparent;
+}
+
+#enter{
+    font-family: 'Special Elite', cursive;
+    font-size: 70px;
+    margin-top: 50%;
+    margin-left: 60px;
+    background: transparent;
+    border: none; 
+    color: $ligh-gray;
+    &:hover{
+            cursor: $cursor;
+    }
+}
+
+#enter:hover, #exit:hover{
+    
+}
+
+#exit{
+    background: transparent;
+    border: none;
+    font-size: 90px;
+    display: none;
+    color: $ligh-gray; 
+    font-family: 'Special Elite', cursive;
+    margin-top: 15px;
+    margin-left: 35px;
+}
